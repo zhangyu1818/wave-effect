@@ -1,6 +1,6 @@
 {
   "name": "wave-effect",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "click wave effect",
   "main": "dist/wave.js",
   "types": "dist/wave.d.ts",
