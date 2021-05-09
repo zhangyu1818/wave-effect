@@ -1,5 +1,10 @@
 # wave-effect
 
+![npm-version](https://img.shields.io/npm/v/wave-effect.svg)
+[![codecov](https://codecov.io/gh/zhangyu1818/wave-effect/branch/main/graph/badge.svg?token=g3WwTlxzGX)](https://codecov.io/gh/zhangyu1818/wave-effect)
+![bundlesize-js-image](https://img.badgesize.io/https:/unpkg.com/wave-effect/dist/wave.js?label=gzip&compression=gzip&style=flat-square)
+
+
 click wave effect with CSS animation.
 
 ## Install
