@@ -1,0 +1,9 @@
+node_modules
+*.lock
+.idea
+dist
+coverage
+example/*
+!example/index.html
+.DS_Store
+package-lock.json
