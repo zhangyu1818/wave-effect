@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>wave example</title>
+    <link rel="stylesheet" type="text/css" href="./wave.css" />
+    <style>
+      body {
+        margin: 5em;
+      }
+      #wave-div {
+        border: 1px solid red;
+      }
+      #border-green {
+        border-color: green;
+      }
+      #border-yellow {
+        border-color: yellow;
+      }
+      #background-blue {
+        background: blue;
+        color: white;
+      }
+      button {
+        display: block;
+      }
+      button + button {
+        margin-top: 20px;
+      }
+    </style>
+
+    <style>
+      #wave-size,
+      #wave-color,
+      #border-green,
+      #border-yellow,
+      #background-blue {
+        --wave-animation-width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>default</p>
+      <button id="wave">wave</button>
+      <hr />
+      <p>wave size</p>
+      <button id="wave-size">wave size</button>
+      <hr />
+      <p>wave color</p>
+      <button id="wave-color">wave color</button>
+      <hr />
+      <p>other element</p>
+      <div id="wave-div">this is div</div>
+      <hr />
+      <p>wave color will use 'border-color' > 'background-color' > 'default color'</p>
+      <button id="border-green">border green</button>
+      <button id="border-yellow">border yellow</button>
+      <button id="background-blue">background blue</button>
+    </div>
+    <script type="module">
+      import wave from './wave.js'
+
+      wave(document.getElementById('wave'))
+      wave(document.getElementById('wave-size'))
+      wave(document.getElementById('wave-color'), {
+        waveColor: 'red',
+      })
+      wave(document.getElementById('wave-div'))
+      wave(document.getElementById('border-green'))
+      wave(document.getElementById('border-yellow'))
+      wave(document.getElementById('background-blue'))
+    </script>
+  </body>
+</html>

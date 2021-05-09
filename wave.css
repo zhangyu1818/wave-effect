@@ -1,0 +1,32 @@
+:root {
+  --wave-shadow-color: #1890ff;
+  --wave-animation-width: 6px;
+}
+[wave-click-animating='true'] {
+  position: relative;
+}
+[wave-click-animating='true']::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 var(--wave-shadow-color);
+  opacity: 0.2;
+  animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1), waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
+  animation-fill-mode: forwards;
+  content: '';
+  pointer-events: none;
+}
+@keyframes waveEffect {
+  100% {
+    box-shadow: 0 0 0 var(--wave-animation-width) var(--wave-shadow-color);
+  }
+}
+@keyframes fadeEffect {
+  100% {
+    opacity: 0;
+  }
+}
